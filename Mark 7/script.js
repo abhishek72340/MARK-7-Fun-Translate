@@ -1,20 +1,16 @@
-const textInput = document.querySelector("#txt-input");
-const output = document.querySelector("#output");
-const form = document.querySelector("#form");
+const btn = document.querySelector(".btn");
+const textArea = document.querySelector(".textarea");
+const translation = document.querySelector(".translated-text");
+const url = "https://api.funtranslations.com/translate/klingon.json";
 
-let URL = "https://api.funtranslations.com/translate/yoda.json";
+btn.addEventListener("click", () => {
+  let value = textArea.value;
+  const newUrl = url + "?text=" + value;
 
-const getURL = (text) => `${URL}?text=${text}`;
-
-const errorHandler = (error) => alert(`Error occured: ${error}`);
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const inputText = textInput.value;
-
-  fetch(getURL(inputText))
+  fetch(newUrl)
     .then((response) => response.json())
-    .then((json) => (output.innerText = json.contents.translated))
-    .catch(errorHandler);
+    .then((data) => {
+      translation.innerHTML = data.contents.translated;
+    })
+    .catch((error) => alert("something went wrong", error));
 });
