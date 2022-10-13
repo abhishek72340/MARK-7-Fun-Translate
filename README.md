@@ -4,7 +4,7 @@
 # The Kligon converter(fun translate)
 This app will convert english sentence to Kligon language.Which is a fictional alien language
 
-> This project is part of neog.camp. It is mark Seven <b>The Kligon converter</b></h4>
+> This project is part of neog.camp. </b></h4>
 
 
 ![Klingon Convert - Google Chrome 11_10_2022 00_13_06](https://user-images.githubusercontent.com/109124944/195020741-c4c3c618-71fa-4a1a-b7c7-a017a3738ce0.png)
